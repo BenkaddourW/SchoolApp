@@ -46,9 +46,11 @@ public class AjouterEtudiantServlet extends HttpServlet {
             etudiantService.ajouterEtudiant(nouvelEtudiant);
 
             // Rediriger vers la liste des étudiants
+
             response.sendRedirect(request.getContextPath() + "/liste-etudiants");
         } catch (Exception e) {
             // En cas d'erreur, retourner au formulaire avec un message d'erreur
+
             request.setAttribute("erreur", "Une erreur est survenue: " + e.getMessage());
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/ajouterEtudiant.jsp");
             dispatcher.forward(request, response);
