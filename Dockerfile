@@ -1,4 +1,4 @@
-FROM tomcat:10.0.2
+FROM tomcat:11.0.5
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/SchoolApp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/SchoolApp-1.0-SNAPSHOT.war
 EXPOSE 8080
